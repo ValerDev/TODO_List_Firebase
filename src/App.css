@@ -23,11 +23,125 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+#root {
+  height: 100vh;
+  overflow: hidden;
+  
+}
+#root > div {
+  background-color: #f9f9f9;
+  align-items: center;
+  height: 100%;
+}
+#root > div >div:last-child > div:last-child{
+  overflow-y: auto;
+  max-height: calc(100vh - 250px);
+  padding: 0 .5em;
+}
+#root > div > div:last-child{
+  padding: 1em 0;
+  width: 70%;
+  margin: 2em auto;
+}
+#root > div > div:first-child {
+  background-color: #dbe1ff;
+  color: white;
+  box-shadow: -3px 1px 8px 1px #bcb6b8;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+i, svg {
+  cursor: pointer;
+}
+button[type='submit'] {
+  background-color: #dbe1ff;
+  transition: .3s;
+}
+button[type='submit']:hover {
+  background-color: #6370b0;
+}
+button:hover span {
+  color: white;
+}
+button span {
+  color: #4b474d;
+}
+ h2, p, div,span {
+  color: #282c34;
+}
+h1 {
+  color: #4b474d;
+}
+.todo {
+  display: flex;
+  align-items: center;
+  padding: .5em;
+  transition: .3s;
+  margin: 1.5em 0;
+  background-color: #e5e5e5;
+  border-radius: 10px;
+ 
+}
+.todo:hover {
+  background-color: #e5e5e5;
+  box-shadow: 2px 2px 9px 2px #92a9ff38;
+  
+}
+.todo p {
+  flex-grow: 1;
+}
 
 .App-link {
   color: #61dafb;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 20px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+ .Mui-checked ~ p {
+  text-decoration: line-through;
+}
+
+.sign-out {
+  display: flex;
+  align-items: center;
+  width: 70px;
+  justify-content: space-between;
+}
+
+.no-items {
+  display: flex;
+  align-items: center;
+  width: 20%;
+  margin: 2em auto;
+
+}
+.MuiSvgIcon-root{
+  color: #6370b0; 
+}
+.MuiSvgIcon-root:hover{
+  opacity: .6;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
